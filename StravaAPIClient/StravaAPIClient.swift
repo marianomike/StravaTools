@@ -20,8 +20,8 @@ class StravaAPIClient {
     
     init() {
         self.oauth = OAuth2CodeGrant(settings: [
-            "client_id": StravaAPIClient.clientID(),
-            "client_secret": StravaAPIClient.clientSecret(),
+            "client_id": "47258",
+            "client_secret": "1b444f5711eff4e25dbe5ad273f4177290f7c6b8",
             "authorize_uri": "https://www.strava.com/oauth/authorize",
             "token_uri": "https://www.strava.com/oauth/token",
             "response_type": "code",
@@ -29,8 +29,8 @@ class StravaAPIClient {
             "redirect_uris": ["stravatest://localhost"], // scheme registered in Info.plist
             "scope": "activity:read_all",
             "parameters": [
-                "client_id": "46551",
-                "client_secret": "614236a56bd82ba38a3893b33571ee866ef94e1d"
+                "client_id": "47258",
+                "client_secret": "1b444f5711eff4e25dbe5ad273f4177290f7c6b8"
             ],
             "verbose": true,
             ] as OAuth2JSON)

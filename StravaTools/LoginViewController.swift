@@ -9,10 +9,11 @@
 import UIKit
 import SwiftUI
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var statsText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +72,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func listActivitiesButtonPressed(_ sender: Any) {
-        StravaAPIClient.sharedInstance.listActivities { (activities: [Activity], error: Error?) in
+        StravaAPIClient.sharedInstance.listActivities { [self] (activities: [Activity], error: Error?) in
             self.updateLogInLogOutButtonsState()
             
             if error != nil {
@@ -91,7 +92,20 @@ final class LoginViewController: UIViewController {
             let max_heartrate = activities.max{$0.max_heartrate ?? 0 < $1.max_heartrate ?? 0}
             print(max_heartrate ?? "failed to find acitivity with highest max heart rate")
             
-            self.showResult("Success", String(describing: activities), {
+            //print(type(of: activities))
+            
+            for distance in activities {
+                
+                if(distance.type == "Run"){
+                    //print("\(distance.start_date_local): \(distance.distance*0.000621371192) Miles")
+                    self.statsText.text += "\((Helper.convertDate(date: distance.start_date_local_date()))): \(Helper.convertMetersToMiles(distance: distance.distance)) Miles | \(Helper.convertMetersToFeet(gain: distance.total_elevation_gain)) Ft\n"
+                }
+            }
+
+            
+            //self.showResult("Success", String(describing: activities), {
+                
+                /*
                 let alert = UIAlertController(title: "Open?", message: "Would you like to open longest activity in a browser?", preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
@@ -102,7 +116,8 @@ final class LoginViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
 
                 self.present(alert, animated: true)
-            })
+                 */
+            //})
         }
     }
     

@@ -18,8 +18,9 @@ struct Activity : Codable {
     let end_latlng: [Float]?
     let type: String
     let start_date_local: String
+    let total_elevation_gain: Float
     
-    init(name: String, distance: Float, max_speed: Float, max_heartrate: Float, id: Int, start_latlng: [Float], end_latlng: [Float], type: String, start_date_local: String) {
+    init(name: String, distance: Float, max_speed: Float, max_heartrate: Float, id: Int, start_latlng: [Float], end_latlng: [Float], type: String, start_date_local: String, total_elevation_gain: Float) {
         self.name = name
         self.distance = distance
         self.max_speed = max_speed
@@ -29,6 +30,7 @@ struct Activity : Codable {
         self.end_latlng = end_latlng
         self.type = type
         self.start_date_local = start_date_local
+        self.total_elevation_gain = total_elevation_gain
     }
     
     func start_date_local_date() -> Date {
