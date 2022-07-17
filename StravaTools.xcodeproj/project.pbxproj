@@ -26,6 +26,7 @@
 		9980D03A247FB00100D2BE9E /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9980D039247FB00100D2BE9E /* UIColor+Theme.swift */; };
 		998D803425586CB100E407FD /* DetailedActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D803325586CB100E407FD /* DetailedActivity.swift */; };
 		9E92D588287926F2006128A6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92D587287926F2006128A6 /* Helper.swift */; };
+		9E92D58A287D1F71006128A6 /* RunListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92D589287D1F71006128A6 /* RunListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9980D039247FB00100D2BE9E /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		998D803325586CB100E407FD /* DetailedActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedActivity.swift; sourceTree = "<group>"; };
 		9E92D587287926F2006128A6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9E92D589287D1F71006128A6 /* RunListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				9908F535246FE39F00ECF7D3 /* LoginViewController.swift */,
 				9908F536246FE39F00ECF7D3 /* LoginViewController.xib */,
 				9980D037247B165400D2BE9E /* MapViewController.swift */,
+				9E92D589287D1F71006128A6 /* RunListView.swift */,
 			);
 			path = StravaTools;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				9908F52B246FDC5F00ECF7D3 /* StravaAPIClient.swift in Sources */,
 				9908F537246FE39F00ECF7D3 /* LoginViewController.swift in Sources */,
 				9908F53E246FF12900ECF7D3 /* OAuth2RetryHandler.swift in Sources */,
+				9E92D58A287D1F71006128A6 /* RunListView.swift in Sources */,
 				9908F4FE246FDB9F00ECF7D3 /* ContentView.swift in Sources */,
 				9980D038247B165400D2BE9E /* MapViewController.swift in Sources */,
 			);
@@ -513,6 +517,7 @@
 				DEVELOPMENT_TEAM = 87JCH7AUCM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = StravaTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,6 +538,7 @@
 				DEVELOPMENT_TEAM = 87JCH7AUCM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = StravaTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
